@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import pdfParse from "pdf-parse";
+import pdf from "pdf-parse";
 
 // Memastikan API menggunakan Node.js Runtime (bukan Edge Runtime)
 export const runtime = "nodejs";

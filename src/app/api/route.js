@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
-import { getRawDatabase, saveDatabase } from '@/lib/db';
+import { getData, saveData } from '@/lib/db';
 
 // Read: Ambil semua data untuk Portal Admin
 export async function GET() {
-    const db = await getRawDatabase();
+    const db = await getData();
     return NextResponse.json({ success: true, data: db });
 }
 
@@ -26,7 +26,7 @@ export async function POST(request) {
         };
 
         db.push(newItem);
-        await saveDatabase(db);
+        await saveData(db);
 
         return NextResponse.json({ success: true, data: newItem }, { status: 201 });
     } catch (error) {
