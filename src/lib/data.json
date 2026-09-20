@@ -1,0 +1,60 @@
+[
+  {
+    "id": "1726700000001",
+    "code": "INV-50KW",
+    "name": "Inverter 50kW On-Grid Soltra",
+    "description": "Inverter efisiensi tinggi untuk komersial dan industri.",
+    "basePrice": 45000000,
+    "minMargin": 15,
+    "publicPrice": 55000000,
+    "category": "Hardware",
+    "isPublic": true
+  },
+  {
+    "id": "1726700000002",
+    "code": "PV-550WP",
+    "name": "Panel Surya Monocrystalline 550Wp",
+    "description": "Panel surya tingkat lanjut dengan garansi performa 25 tahun.",
+    "basePrice": 2100000,
+    "minMargin": 12,
+    "publicPrice": 2600000,
+    "category": "Hardware",
+    "isPublic": true
+  }
+  {
+    "metrics": {
+      "totalProjects": 12,
+      "evmProgress": "+4.2% On-Track",
+      "pendingRFQ": 8,
+      "hseSafeHours": "142,500 hrs"
+    },
+    "projects": []
+  }
+  {
+    "$schema": "PriceBookItem",
+    "id": "ObjectId / UUID",
+    "code": "STRING (Unique SKU Code, e.g., PRV-SOL-001)",
+    "name": "STRING (Nama item atau jasa)",
+    "category": "STRING (Contoh: Hardware, Jasa Instalasi, Konsultasi)",
+    "basePriceIDR": "NUMBER (Harga acuan utama dalam Rupiah)",
+    "tiers": [
+      {
+        "tierName": "Tier 1 (Wholesale / Kontraktor)",
+        "discountPercentage": 15,
+        "customPriceIDR": 8500000
+      },
+      {
+        "tierName": "Tier 2 (Retail / End-User)",
+        "discountPercentage": 0,
+        "customPriceIDR": 10000000
+      }
+    ],
+    "addons": {
+      "allowLiveCurrency": true,
+      "taxIncluded": true,
+      "marginMarkup": 20
+    },
+    "status": "ENUM ('Active', 'Draft', 'Archived')",
+    "updatedAt": "TIMESTAMP"
+  }
+]
